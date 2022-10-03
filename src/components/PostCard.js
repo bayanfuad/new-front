@@ -11,7 +11,7 @@ function PostCard(props) {
 
   return (
     <div className='postCard'>
-      <button onClick={deletePost}>x</button>
+      <button onClick={deletePost}>delete</button>
       <h3>{props.item.title}</h3>
       <p>{props.item.content}</p>
       {props.item.comments.length?<CommentHolder key={1} post={props.item} comments={props.comments} data={props.item.comments}/>:<p className='cmntHolderp'>No comments!</p>}
