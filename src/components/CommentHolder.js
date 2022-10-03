@@ -5,7 +5,7 @@ function CommentHolder({ data, comments }) {
 
   return (
     <div className='cmntHolder'>
-      {data.map((item, i) => <div key={i}><p style={{ color: 'Green', fontWeight: 'bolder' }}>By :{cookies.load('name')} </p><p>{item.text}</p><hr></hr></div>)}
+      {data.map((item, i) => <div key={i}><p style={{ color: 'pink', fontWeight: 'bolder' }}>By :{cookies.load('name')} </p><p>{item.text}</p><hr></hr></div>)}
     </div>
   )
 }
