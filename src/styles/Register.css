@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .register {
+    min-height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(4, 4, 4);
+  }
+  
+  .registerCard {
+    width: 60%;
+    height: 600px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    /* padding: 20px; */
+    display: flex;
+  }
+  
+  .registerHero {
+    width: 60%;
+    background-color:#A0BCC2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: column wrap;
+    border-radius: 20px 0px 0px 20px;
+  }
+  
+  .heroTop {
+    background-color:#A0BCC2;
+    height: 20%;
+    border-top-left-radius: 20px;
+    padding: 40px 0px 0px 20px;
+  }
+  
+ 
+  
+  .heroMid {
+    background-color: #A0BCC2;
+    height: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+  }
+  
+  .heroBot {
+    background-color:#A0BCC2;
+    height: 30%;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .registerForm {
+    width: 40%;
+    background-color:#A0BCC2;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  #siteName {
+    color: rgb(7, 7, 7);
+    text-indent: 220px;
+  }

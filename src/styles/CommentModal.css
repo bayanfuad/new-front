@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .commentsContainer {
+    
+      max-height: 250px;
+      min-height: 250px;
+      background-color:#FEFBE7;
+      color: rgb(4, 4, 4);
+      overflow-y: auto;
+      border-radius: 5px;
+      padding: 5px;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  
+  .commentForm {
+    padding-top: 10px;
+  }
+  .commentInput {
+    width: 35%;
+    padding: 10px;
+    background-color: rgba(238, 226, 226, 0.437);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    margin-left: 10%;
+    border-radius: 5px;
+    border-left: 6px solid rgb(113, 116, 118);
+  }
+  
+  .commentSubmit {
+    width: 10%;
+    padding: 10px;
+    background-color: rgb(228, 238, 247);
+    margin-bottom: 30px;
+    margin-right: 8%;
+    margin-left: 2%;
+    border-radius: 5px;
+    color: white;
+    border-color: gray;
+    box-shadow: 2px 2px 5px black;}

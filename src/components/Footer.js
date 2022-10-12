@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import '../styles/Footer.css';
 
 function Footer() {
   return (
-    <div className='foot'>
-      <h4>All rights Reserved</h4>
+    <div className='footer'>
+      <h4>All rights Reserved @ 2022</h4>
     </div>
   )
 }
