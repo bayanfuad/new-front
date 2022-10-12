@@ -10,7 +10,8 @@ import cookies from 'react-cookies'
 
 function Register() {
 
-  const { showSignIn, isAuth, setIsAuth } = useContext(authContext);
+  // const { showSignIn, isAuth, setIsAuth } = useContext(authContext);
+  const { isAuth, setIsAuth, authStates } = useContext(authContext);
 
   useEffect(() => {
     const token = cookies.load('token');
@@ -29,10 +30,12 @@ function Register() {
           <div className='registerCard'>
             <RegisterHero />
             <div className='registerForm'>
-              <When condition={showSignIn}>
+              {/* <When condition={showSignIn}> */}
+              <When condition={authStates.showSignIn}>
                 <SigninForm />
               </When>
-              <When condition={!showSignIn}>
+              {/* <When condition={!showSignIn}> */}
+              <When condition={!authStates.showSignIn}>
                 <SignUpForm />
               </When>
             </div>
