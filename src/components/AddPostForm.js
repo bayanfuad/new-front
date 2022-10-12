@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { dataContext } from '../contexts/DataProvider'
 
-function AddPostForm({apfunc}) {
+function AddPostForm() {
+
+  const { addPost } = useContext(dataContext);
+
   return (
-      <form onSubmit={apfunc} className='AddPostForm'>
-      <input type='text' placeholder='Title' name='title' id='ttt'></input>
-      <br></br>
-      <input type='text' placeholder='Content' name='contnet' id='tttC'></input>
-      <br></br>
-      <input type='submit' value='Post' id='tttS'></input>
-      </form>
+    <form className='addPostForm' onSubmit={addPost}>
+      <p>What's in your mind..</p>
+      <input type='text' placeholder='Title' name='title' className='in1' required />
+      <input type='text' placeholder='Content' name='content' className='in2' required />
+      <input type='submit' value='Share' className='submitBtn' />
+    </form>
   )
 }
 

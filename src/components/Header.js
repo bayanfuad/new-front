@@ -1,17 +1,28 @@
-import cookies from "react-cookies";
+import React, { useContext } from 'react'
+import { authContext } from '../contexts/AuthProvider'
+import { When } from 'react-if';
+import cookies from 'react-cookies'
 
-function Header({ x, loggedin }) {
+function Header() {
+
+  const { logOut, isAuth } = useContext(authContext);
+
   return (
-    <div className="head">
-      <h1>posts and comments</h1>
-      {loggedin && (
-        <div className="logee">
-          <p>Welcome Back {cookies.load("name")}</p>
-          <button onClick={x}>LogOut</button>
+    <header>
+      <nav className="bp4-navbar bp4-light">
+        <div className="bp4-navbar-group bp4-align-left">
         </div>
-      )}
-    </div>
-  );
+        <div className="bp4-navbar-group bp4-align-right">
+          <When condition={isAuth}>
+            <button className="bp4-button bp4-minimal bp4-icon-home">Home</button>
+            <button className="bp4-button bp4-minimal bp4-icon-user">{cookies.load('username')}</button>
+            <button className="bp4-button bp4-minimal" onClick={logOut}>Log Out</button>
+            <span className="bp4-navbar-divider"></span>
+          </When>
+        </div>
+      </nav>
+    </header>
+  )
 }
 
-export default Header;
+export default Header
