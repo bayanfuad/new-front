@@ -2,7 +2,8 @@ import React, { useContext } from 'react'
 import { authContext } from '../contexts/AuthProvider';
 
 function SignUpForm() {
-  const {signUp,err} = useContext(authContext);
+  // const {signUp,err} = useContext(authContext);
+  const { signUp, authStates } = useContext(authContext);
   return (
     <div className='Signin'>
       <p >Sign Up</p>
@@ -13,7 +14,8 @@ function SignUpForm() {
         <input type='password' name='confirmPassword' placeholder='Confirm Password' className='formInput' required ></input>
         <input type='submit' name='submit' value='Submit' className='formSubmit' ></input>
       </form>
-      <p id='errMsg'>{err}</p>
+      {/* <p id='errMsg'>{err}</p> */}
+      <p id='errMsg'>{authStates.err}</p>
     </div>
   )
 }
