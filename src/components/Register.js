@@ -30,11 +30,11 @@ function Register() {
           <div className='registerCard'>
             <RegisterHero />
             <div className='registerForm'>
-              {/* <When condition={showSignIn}> */}
+              
               <When condition={authStates.showSignIn}>
                 <SigninForm />
               </When>
-              {/* <When condition={!showSignIn}> */}
+          
               <When condition={!authStates.showSignIn}>
                 <SignUpForm />
               </When>

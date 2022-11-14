@@ -18,11 +18,11 @@ function Main() {
       setIsAuth(true);
       getPosts();
     }
-  }, [refreshMain]);  //reson of infinate loop
+  }, [refreshMain]);  
 
   return (
     <>
-    {console.log('main')}
+   
       <When condition={isAuth}>
         <main className='main'>
           <div className='input'>
