@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import '../styles/SigninForm.css';
 import { authContext } from '../contexts/AuthProvider';
+import { VStack} from "@chakra-ui/react";
 
 function SigninForm() {
   const { signIn, err } = useContext(authContext);
@@ -8,9 +9,11 @@ function SigninForm() {
     <div className='Signin'>
       <p >Sign In</p>
       <form className='SigninForm' onSubmit={signIn}>
+      <VStack>
         <input type='text' name='username' placeholder='Username' className='formInput' required ></input>
         <input type='password' name='password' placeholder='Password' className='formInput' required ></input>
         <input type='submit' name='submit' value='CONTINUE' className='formSubmit' ></input>
+        </VStack>
       </form>
       <p id='errMsg'>{err}</p>
     </div>
