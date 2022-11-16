@@ -7,6 +7,7 @@ import '../styles/Main.css'
 import AddPostForm from './AddPostForm';
 import PostHolder from './PostHolder';
 import { dataContext } from '../contexts/DataProvider';
+import { Text, VStack, Input, Box, Heading } from "@chakra-ui/react";
 
 function Main() {
   const { isAuth, setIsAuth } = useContext(authContext);
@@ -22,7 +23,11 @@ function Main() {
 
   return (
     <>
-   
+     <Heading  as='h1' size='xl'
+     bgGradient="linear(to-l, #FF0080,#7928CA)"
+     bgClip="text">
+        Welcome To Our Whiteboard...
+      </Heading>
       <When condition={isAuth}>
         <main className='main'>
           <div className='input'>

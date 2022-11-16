@@ -6,6 +6,7 @@ function AddPostForm() {
 
   const { addPost } = useContext(dataContext);
   return (
+   
     <Box
       p='20px'
       bg='inhret'
