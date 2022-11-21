@@ -8,7 +8,7 @@ import DataProvider from './contexts/DataProvider';
 import { Button, useColorMode, VStack } from '@chakra-ui/react';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import theme from './components/Theme';
-
+import {provider} from 'react-redux';
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();

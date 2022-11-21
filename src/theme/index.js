@@ -21,24 +21,7 @@ const myTheme = extendTheme( {
                     boxShadow: "none"
                 }
             },
-            variants: {
-                auth: {
-                    bg: "authButton.100",
-                    color: "white",
-                    _hover: {
-                        bg: "authButton.900",
-                        color: "white"
-                    }
-                },
-                mode: {
-                    bg: "modeButton.100",
-                    color: "modeButton.900",
-                    _hover: {
-                        bg: "modeButtonHover.100",
-                        color: "modeButtonHover.900"
-                    }
-                }
-            }
+            
         },
         Input: {
             baseStyle: {
